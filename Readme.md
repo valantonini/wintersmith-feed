@@ -1,5 +1,5 @@
 # wintersmith-paginator
-An rss feed generator for [Wintersmith's](https://wintersmith.io "Wintersmith")
+An rss feed generator for [Wintersmith](https://wintersmith.io "Wintersmith")
 
 Requires wintersmith-contents
 
