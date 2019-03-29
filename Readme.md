@@ -15,3 +15,9 @@ Add the feed.js and templates to the plugins folder.
     "./plugins/feed.js"
   ]
 ```
+articles location can be configured in config.json
+```JSON
+  "feed": {
+    "articles": "posts"
+  }
+```
