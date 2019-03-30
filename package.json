@@ -1,8 +1,8 @@
 {
   "name": "wintersmith-feed",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "rss feed generator for wintersmith",
-  "main": "/dist",
+  "main": "main/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/valantonini/wintersmith-feed#readme",
   "dependencies": {
+    "lodash": "^4.17.11",
+    "wintersmith": "^2.5.0",
     "wintersmith-contents": "^1.0.0"
   }
 }

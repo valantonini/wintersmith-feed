@@ -5,14 +5,13 @@ Requires wintersmith-contents
 
 ```bash
 npm install wintersmith-contents --save
+npm install wintersmith-feed --save
 ```
-
-Add the feed.js and templates to the plugins folder.
 
 ```JSON
   "plugins": [
     "wintersmith-contents",
-    "./plugins/feed.js"
+    "wintersmith-feed"
   ]
 ```
 articles location can be configured in config.json
