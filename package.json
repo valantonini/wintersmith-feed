@@ -1,0 +1,27 @@
+{
+  "name": "wintersmith-feed",
+  "version": "0.0.1",
+  "description": "rss feed generator for wintersmith",
+  "main": "/dist",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valantonini/wintersmith-feed.git"
+  },
+  "keywords": [
+    "wintersmith-plugin",
+    "rss",
+    "wintersmith"
+  ],
+  "author": "val antonini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valantonini/wintersmith-feed/issues"
+  },
+  "homepage": "https://github.com/valantonini/wintersmith-feed#readme",
+  "dependencies": {
+    "wintersmith-contents": "^1.0.0"
+  }
+}
