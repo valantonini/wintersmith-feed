@@ -1,4 +1,7 @@
 # wintersmith-feed
+
+![npm](https://img.shields.io/npm/dt/wintersmith-feed.svg?style=plastic)
+
 An rss feed generator for [Wintersmith](https://wintersmith.io "Wintersmith")
 
 Requires wintersmith-contents
@@ -15,8 +18,15 @@ npm install wintersmith-feed --save
   ]
 ```
 articles location can be configured in config.json
+
 ```JSON
   "feed": {
     "articles": "posts"
   }
+```
+
+don't forget the meta tag in the layout for autodiscovery
+
+```pug
+link(rel='alternate', type='application/rss+xml', title='RSS Feed for my blog', href='/feed.xml')
 ```
