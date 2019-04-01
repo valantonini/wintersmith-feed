@@ -1,5 +1,6 @@
 # wintersmith-feed
 
+[![Build Status](https://travis-ci.org/valantonini/wintersmith-feed.svg?branch=master)](https://travis-ci.org/valantonini/wintersmith-feed)
 ![npm](https://img.shields.io/npm/v/wintersmith-feed.svg)
 ![npm](https://img.shields.io/npm/dt/wintersmith-feed.svg)
 
