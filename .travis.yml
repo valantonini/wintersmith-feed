@@ -3,3 +3,10 @@ node_js:
   - "10"
 install:
   - npm install
+deploy:
+  provider: npm
+  email: ${NPM_EMAIL}
+  api_key: ${NPM_TOKEN}
+  on:
+    tags: true
+    branch: master

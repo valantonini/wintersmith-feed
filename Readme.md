@@ -1,6 +1,7 @@
 # wintersmith-feed
 
-![npm](https://img.shields.io/npm/dt/wintersmith-feed.svg?style=plastic)
+![npm](https://img.shields.io/npm/v/wintersmith-feed.svg)
+![npm](https://img.shields.io/npm/dt/wintersmith-feed.svg)
 
 An rss feed generator for [Wintersmith](https://wintersmith.io "Wintersmith")
 
