@@ -2,9 +2,9 @@
   "name": "wintersmith-feed",
   "version": "0.0.4",
   "description": "rss feed generator for wintersmith",
-  "main": "main/",
+  "src": "src/",
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "vows ./test/*.js --spec"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,11 @@
   "homepage": "https://github.com/valantonini/wintersmith-feed#readme",
   "dependencies": {
     "lodash": "^4.17.11",
-    "wintersmith": "^2.5.0",
+    "wintersmith": "^2.5.0"
+  },
+  "devDependencies": {
+    "fast-xml-parser": "^3.19.0",
+    "vows": "^0.8.3",
     "wintersmith-contents": "^1.0.0"
   }
 }

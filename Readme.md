@@ -27,7 +27,7 @@ articles location can be configured in config.json
   }
 ```
 
-don't forget the meta tag in the layout for autodiscovery
+don't forget the meta tag in your layout for autodiscovery
 
 ```pug
 link(rel='alternate', type='application/rss+xml', title='RSS Feed for my blog', href='/feed.xml')

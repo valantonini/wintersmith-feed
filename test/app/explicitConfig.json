@@ -1,0 +1,14 @@
+{
+  "locals": {
+    "url": "http://mysite",
+    "name": "my blog",
+    "description": "my description"
+  },
+  "feed": {
+    "articles": "posts"
+  },
+  "plugins": [
+    "../../src/index.js",
+    "wintersmith-contents"
+  ]
+}

@@ -2,9 +2,10 @@ const _ = require('lodash')
 const pug = require('pug')
 
 function index(env, callback) {
-
   const defaults = {
     articles: 'articles', // directory containing contents to paginate
+    title: env.locals.name || "",
+    description: env.locals.description || "",
   };
 
   // assign defaults any option not set in the config file
@@ -22,6 +23,7 @@ function index(env, callback) {
 
     getView() {
       return (env, locals, contents, templates, callback) => {
+
         if (!locals.url) {
           return callback(new Error('locals.url must be defined.'))
         }
@@ -36,8 +38,10 @@ function index(env, callback) {
           .sort((a, b) => b.metadata.date - a.metadata.date);
 
         const context = _.merge({
-          entries
-        }, locals)
+          entries: entries,
+          title: options.title,
+          description: options.description
+        }, locals, options)
 
         callback(null, Buffer.from(template(context)))
       }
