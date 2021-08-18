@@ -4,14 +4,25 @@ const path = require('path');
 const fs = require('fs');
 const fastXmlParser = require('fast-xml-parser');
 const wintersmith = require('wintersmith');
-
+const site = "app";
 vows
     .describe('configuration tests')
     .addBatch({
         'wintersmith environment with default configuration': {
             topic: () =>  {
-                const config = path.join(__dirname, 'app/defaultConfig.json');
-                return wintersmith(config);
+                const configuration = {
+                    "locals": {
+                        "url": "http://mysite"
+                    },
+                    "feed": {
+                        "articles": "posts"
+                    },
+                    "plugins": [
+                        path.join(__dirname, '../src/index.js'),
+                        "wintersmith-contents"
+                    ]
+                };
+                return wintersmith(configuration, path.join(__dirname, site));
             },
             'loaded ok': function(env) {
                 return assert.instanceOf(env, wintersmith.Environment);
@@ -34,8 +45,22 @@ vows
     .addBatch({
         'wintersmith environment with explicit configuration': {
             topic: () =>  {
-                const config = path.join(__dirname, 'app/explicitConfig.json');
-                return wintersmith(config);
+                const configuration = {
+                    "locals": {
+                        "url": "http://mysite",
+                        "name": "my blog",
+                        "description": "my description"
+                    },
+                    "feed": {
+                        "articles": "posts"
+                    },
+                    "plugins": [
+                        "../../src/index.js",
+                        "wintersmith-contents"
+                    ]
+                };
+
+                return wintersmith(configuration, path.join(__dirname, site));
             },
             'loaded ok': function(env) {
                 return assert.instanceOf(env, wintersmith.Environment);
