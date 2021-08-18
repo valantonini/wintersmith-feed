@@ -1,6 +1,6 @@
 {
   "name": "wintersmith-feed",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "rss feed generator for wintersmith",
   "src": "src/",
   "scripts": {
