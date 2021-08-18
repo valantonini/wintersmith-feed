@@ -14,17 +14,25 @@ npm install wintersmith-feed --save
 ```
 
 ```JSON
+{
   "plugins": [
     "wintersmith-contents",
     "wintersmith-feed"
   ]
+}
 ```
-articles location can be configured in config.json
+
+articles location can be configured in config.json. by default, it will use locals.name and locals.description for title
+and description respectively. Those can be overridden in the feed config.
 
 ```JSON
+{
   "feed": {
-    "articles": "posts"
+    "articles": "posts",
+    "title": "my blog",
+    "description": "software engineer"
   }
+}
 ```
 
 don't forget the meta tag in your layout for autodiscovery

@@ -8,13 +8,7 @@ function index(env, callback) {
     description: env.locals.description || "",
   };
 
-  // assign defaults any option not set in the config file
-  const options = env.config.feed || {};
-  for (const key in defaults) {
-    if (options[key] == null) {
-      options[key] = defaults[key];
-    }
-  }
+  const options = Object.assign(defaults, env.config.feed || {});
 
   class Feed extends env.plugins.Page {
     getFilename() {
