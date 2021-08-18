@@ -20,7 +20,10 @@ vows
                     "plugins": [
                         path.join(__dirname, '../src/index.js'),
                         "wintersmith-contents"
-                    ]
+                    ],
+                    "require": {
+                        "typogr": "typogr"
+                    }
                 };
                 return wintersmith(configuration, path.join(__dirname, site));
             },
@@ -57,7 +60,10 @@ vows
                     "plugins": [
                         "../../src/index.js",
                         "wintersmith-contents"
-                    ]
+                    ],
+                    "require": {
+                        "typogr": "typogr"
+                    }
                 };
 
                 return wintersmith(configuration, path.join(__dirname, site));
@@ -97,7 +103,10 @@ vows
                     "plugins": [
                         "../../src/index.js",
                         "wintersmith-contents"
-                    ]
+                    ],
+                    "require": {
+                        "typogr": "typogr"
+                    }
                 };
 
                 return wintersmith(configuration, path.join(__dirname, site));

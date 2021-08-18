@@ -23,6 +23,7 @@
   "homepage": "https://github.com/valantonini/wintersmith-feed#readme",
   "dependencies": {
     "lodash": "^4.17.11",
+    "typogr": "^0.6.8",
     "wintersmith": "^2.5.0"
   },
   "devDependencies": {
