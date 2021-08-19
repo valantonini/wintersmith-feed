@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const pug = require('pug')
 
 function index(env, callback) {
@@ -31,11 +30,11 @@ function index(env, callback) {
           ))
           .sort((a, b) => b.metadata.date - a.metadata.date);
 
-        const context = _.merge({
+        const context = Object.assign({
           entries: entries,
           title: options.title,
           description: options.description
-        }, locals, options)
+        }, locals, options);
 
         callback(null, Buffer.from(template(context)))
       }
